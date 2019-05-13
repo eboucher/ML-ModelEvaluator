@@ -1,4 +1,4 @@
-package com.example.demo;
+package com.example.demo.model;
 
 import java.io.Serializable;
 
@@ -19,7 +19,7 @@ public class User implements Serializable {
     @Column(nullable = false)
     private String name;
 
-    protected User() {
+    public User() {
     }
 
     public User(String name) {
@@ -29,5 +29,10 @@ public class User implements Serializable {
 
     public String getName() {
         return this.name;
+    }
+
+    @Override
+    public String toString() {
+        return getName();
     }
 }
