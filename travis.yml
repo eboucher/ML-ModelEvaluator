@@ -1,0 +1,9 @@
+language: java
+jdk: oraclejdk11
+dist: trusty
+
+before_install:
+- chmod a+x ./mvnw
+
+script:
+- mvn clean org.jacoco:jacoco-maven-plugin:prepare-agent install sonar:sonar
